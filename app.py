@@ -81,4 +81,5 @@ def prediction():
     return render_template("index.html",output =f"The classified prediction is {classification_pred_name},The regression prediction is {round(regg_pred)} liters,cluster prediction is {cluster_name_predict},the recommendation prediction is: {recomm_name}")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    app.run(debug=True,host="0.0.0.0",port=int(os.environ.get("PORT",5000)))
