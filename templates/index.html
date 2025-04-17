@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/prediction" method="post">
+            <select name="Soil_Type" id="Soil_Type">
+                <option value="Clay">Clay</option>
+                <option value="Loamy">Loamy</option>
+                <option value="Sandy">Sandy</option>
+            </select>
+
+            <input type="number" step="any" name="Temperature" placeholder="Temperature" required>
+            <input type="number" step="any" name="Rainfall" placeholder="Rainfall" required>
+            <input type="number" step="any" name="Humidity" placeholder="Humidity" required>
+            <input type="number" step="any" name="pH_Level" placeholder="pH_Level" required>
+            <input type="number" step="any" name="Soil_Moisture" placeholder="Soil_Moisture" required>
+            <input type="number" step="any" name="Organic_Matter" placeholder="Organic_Matter" required>
+            <input type="number" step="any" name="Sunlight" placeholder="Sunlight" required>
+
+            <select name="Nutrient_Content">
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+            </select>
+
+            <input type="number" step="any" name="Soil_Compaction" placeholder="Soil_Compaction" required>
+
+            <select name="Season">
+                <option value="Monsoon">Monsoon</option>
+                <option value="Summer">Summer</option>
+                <option value="Winter">Winter</option>
+            </select>
+            <button type="submit">submit</button>
+            <h3>{{output}}</h3>
+
+        </form>
+    </div>
+</body>
+</html>
